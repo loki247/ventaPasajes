@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema de Venta de Pasajes</title>
+    <link rel="stylesheet" type="text/css" href="css/bulma.css" />
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div id="container">
+    <nav class="nav has-shadow" id="top">
+        <div class="container">
+            <div class="nav-left" id="barraSuperior">
+                <p>Sistema de Venta de Pasajes</p>
+            </div>
+            <span class="nav-toggle">
+	                <span></span>
+	                <span></span>
+	                <span></span>
+	            </span>
+        </div>
+    </nav>
+
+    <form action="checkLogin.php" method="post" id="formServicio">
+        <div class="columns">
+
+            <div class="column"></div>
+
+            <div class="column is-2">
+                <br>
+                <label class="label">RUT:</label>
+                <p class="control">
+                    <input type="text" class="input" id="rut" name="rut">
+                </p>
+
+
+                <label class="label">Contraseña</label>
+                <p class="control">
+                    <input type="text" class="input" id="pass" name="pass">
+                </p>
+
+                <input type="submit" value="Entrar" class="button is-primary" />
+
+            </div>
+
+            <div class="column"></div>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
