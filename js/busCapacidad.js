@@ -15,15 +15,31 @@ $(document).ready(function () {
     }
    
     var datos = getGET();
+
+    if(datos.origen.indexOf("+")!=-1 || datos.destino.indexOf("+")!=-1){
         $("#servicio").append
         ("<ul id='datosServicio'>" +
-        "<li>Origen: " + datos.origen + "</li>" +
-        "<li>Destino: " + datos.destino + "</li>" +
-        "<li>Fecha: " + datos.fecha + "</li>" +
-        "<li>Hora: " + datos.horaSalida + "</li>" +
-        "<li>Valor: $" + datos.valor + "</li>" +
-        "<li>Salón: " + datos.salon + "</li>" +
-        "</ul>");
+            "<li>Origen: " + datos.origen.replace("+", " ") + "</li>" +
+            "<li>Destino: " + datos.destino.replace("+", " ") + "</li>" +
+            "<li>Fecha: " + datos.fecha + "</li>" +
+            "<li>Hora: " + datos.horaSalida + "</li>" +
+            "<li>Valor: $" + datos.valor + "</li>" +
+            "<li>Salón: " + datos.salon + "</li>" +
+            "</ul>");
+    }
+    else{
+        $("#servicio").append
+        ("<ul id='datosServicio'>" +
+            "<li>Origen: " + datos.origen+ "</li>" +
+            "<li>Destino: " + datos.destino + "</li>" +
+            "<li>Fecha: " + datos.fecha + "</li>" +
+            "<li>Hora: " + datos.horaSalida + "</li>" +
+            "<li>Valor: $" + datos.valor + "</li>" +
+            "<li>Salón: " + datos.salon + "</li>" +
+            "</ul>");
+    }
+
+
 
 
    $.getJSON(url + "rest/get_paraderosSubida.php?c=" + datos.idOrigen, function (result) {
