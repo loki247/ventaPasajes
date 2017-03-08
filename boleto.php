@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistema de Venta de Pasajes</title>
+    <link rel="icon" href="img/favicon.PNG" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="css/bulma.css" />
     <link rel="stylesheet" type="text/css" href="css/estilo.css" />
     <link rel="stylesheet" type="text/css" href="css/calendario_estilo.css" />
