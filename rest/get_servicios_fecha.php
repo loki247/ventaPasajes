@@ -11,8 +11,8 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$idBus = $_GET["i"];
-$sql = "CALL get_bus(".$idBus.")";
+$fecha = $_GET["f"];
+$sql = "CALL get_servicios_fecha(".$fecha.")";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -20,7 +20,7 @@ if (mysqli_num_rows($result) > 0) {
     $i = 0;
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        
+
         $arrayJson[$i]= $row;
         $i++;
     }
