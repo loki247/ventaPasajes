@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/registroServicios.js"></script>
+
 
 </head>
 
@@ -60,38 +60,41 @@
 
     </nav>
 
-    <form action="#" method="get" id="formServicio">
+
         <div class="columns">
 
-            <div class="column is-2" style="margin-left: 10px;">
-                <script>
-                    $(function () {
-                        $("#datepicker").datepicker({
-                            dateFormat: "dd-mm-yy",
-                            firstDay: 1,
-                            showAnim: "slideDown",
-                            monthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
-                            dayNames: ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"],
-                            dayNamesMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"]
-                        });
+            <script>
+                $(function () {
+                    $("#datepicker").datepicker({
+                        dateFormat: "yy-mm-dd",
+                        firstDay: 1,
+                        showAnim: "slideDown",
+                        monthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                        dayNames: ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"],
+                        dayNamesMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"]
                     });
-                </script>
+                });
+            </script>
 
-                <label class="label">Fecha</label>
-                <p class="control">
-                    <input type="text" id="datepicker" class="input" readonly="readonly" name="f">
-                </p>
+            <div class="column is-2" style="margin-left: 20px; margin-top: 20px; ">
+                <form action="#servicios">
+
+                    <label class="label">Fecha</label>
+                    <p class="control">
+                        <input type="text" id="datepicker" class="input" readonly="readonly">
+                    </p>
+                    <input type="submit" value="Buscar" class="button" id="btnBuscar"/>
+                </form>
             </div>
 
-            <div class="column">
+            <script src="js/servicios_fecha.js"></script>
 
-
+            <div class="column is-8 table is-bordered table is-striped" id="servicios" style="margin-top: 30px; margin-left: 20px;">
+                <table id="resultados"></table>
             </div>
 
-            <div class="column"></div>
         </div>
 
-    </form>
 </div>
 
 </body>

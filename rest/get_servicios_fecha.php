@@ -12,7 +12,7 @@ if (!$conn) {
 }
 
 $fecha = $_GET["f"];
-$sql = "CALL get_servicios_fecha(".$fecha.")";
+$sql = "CALL get_servicios_fecha('".$fecha."')";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {

@@ -34,4 +34,3 @@ if (mysqli_num_rows($result) > 0) {
 mysqli_close($conn);
 echo json_encode($arrayJson);
 return json_encode($arrayJson);
-?> 
