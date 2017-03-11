@@ -133,7 +133,7 @@ $(document).ready(function () {
             }
 
             //Cama de 1 piso
-            
+
             if (field.capacidad == 24) {
                 $("#tipoSalon").append("Salón Cama");
 
@@ -192,7 +192,7 @@ $(document).ready(function () {
                 $("#tipoSalon").append("Salón Cama 1er Piso");
                 
                 $("#salon").append(
-                "<tr id='fila1'>" +
+                    "<tr id='fila1'>" +
                         "<td><label>3</label><input type='checkbox' id='3' value='3' name='asiento' ></td>" +
                         "<td><label>6</label><input type='checkbox' id='6' value='6' name='asiento' ></td>" +
                         "<td><label>9</label><input type='checkbox' id='9' value='9' name='asiento' ></td>" +
@@ -323,7 +323,7 @@ $(document).ready(function () {
 
                 //1er Piso
                 $("#salon").append(
-                "<tr id='fila1'>" +
+                    "<tr id='fila1'>" +
                         "<td><label>34</label><input type='checkbox' id='34' value='34' name='asiento' ></td>" +
                         "<td><label>37</label><input type='checkbox' id='37' value='37' name='asiento' ></td>" +
                         "<td><label>40</label><input type='checkbox' id='40' value='40' name='asiento' ></td>" +
@@ -355,7 +355,7 @@ $(document).ready(function () {
 
                 $("#tipoSalon2").append("Salón Cama 2do Piso");
                 $("#salon2").append(
-                "<tr id='fila4'>" +
+                    "<tr id='fila4'>" +
                         "<td><label>3</label><input type='checkbox' id='3' value='3' name='asiento' ></td>" +
                         "<td></td>" +
                         "<td></td>" +
@@ -421,7 +421,7 @@ $(document).ready(function () {
 
                 //1er Piso
                 $("#salon").append(
-                "<tr id='fila1'>" +
+                    "<tr id='fila1'>" +
                         "<td><label>3</label><input type='checkbox' id='3' value='3' name='asiento' ></td>" +
                         "<td><label>7</label><input type='checkbox' id='7' value='7' name='asiento' ></td>" +
                         "<td><label>11</label><input type='checkbox' id='11' value='11' name='asiento' ></td>" +
@@ -460,7 +460,7 @@ $(document).ready(function () {
 
                 $("#tipoSalon2").append("Salón Semi-Cama 2do Piso");
                 $("#salon2").append(
-                "<tr id='fila4'>" +
+                    "<tr id='fila4'>" +
                         "<td><label>19</label><input type='checkbox' id='19' value='19' name='asiento' ></td>" +
                         "<td><label>23</label><input type='checkbox' id='23' value='23' name='asiento' ></td>" +
                         "<td></td>" +
