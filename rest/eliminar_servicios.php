@@ -33,7 +33,6 @@
 require ("conector.php");
 
 $idServicio = $_GET['s'];
-
 $sql = "CALL eliminar_servicio(".$idServicio.")";
 
 if (mysqli_query($conn, $sql)) {
