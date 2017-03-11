@@ -24,7 +24,8 @@ $(document).ready(function () {
                     "<td>" + field.horaSalida + "</td>" +
                     "<td>$" + field.valor + "</td>" +
                     "<td>" +
-                        "<form action='#' method='get'>" +
+                        "<form action='rest/eliminar_servicios.php' method='get'>" +
+                            "<input type='hidden' name='s' value='"+field.idServicio+"'>" +
                     "       <input type='submit' id='btnEliminar' value='Eliminar Servicio' class='button is-primary is-outlined'>" +
                     "   </form>" +
                     "</td>" +
