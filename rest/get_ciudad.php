@@ -1,17 +1,6 @@
 <?php
-header("Access-Control-Allow-Origin: *");
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ventapasajes";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+require ("conector.php");
 
 $sql = "CALL get_ciudad()";
 $result = mysqli_query($conn, $sql);

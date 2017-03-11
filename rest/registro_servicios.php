@@ -29,17 +29,7 @@
 </html>
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ventapasajes";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+require ("conector.php");
 
 $fecha =  date('Y-m-d', strtotime($_GET["f"]));
 $horaSalida = $_GET["s"];
