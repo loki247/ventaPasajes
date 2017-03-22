@@ -557,8 +557,8 @@ $(document).ready(function () {
 
     });
 
-    $("#datos").append
-        ("<input type='hidden' name='origen' value='" + datos.origen + "'>" +
+    $("#datos").append(
+        "<input type='hidden' name='origen' value='" + datos.origen + "'>" +
         "<input type='hidden' name='destino' value='" + datos.destino + "'>" +
         "<input type='hidden' name='salon' value='" + datos.salon + "'>" +
         "<input type='hidden' name='fecha' value='" + datos.fecha + "'>" +
