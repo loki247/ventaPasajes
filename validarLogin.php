@@ -15,7 +15,7 @@ $result = mysqli_query($conn, $sql);
 if ($row = mysqli_fetch_array($result)){
     if($row['password']== $password){
         session_start();
-        $_SESSION['usuario'] = $row['nombre'];
+        $_SESSION['usuario'] = $row['nombre']." ". $row['apellidoPaterno'];
         header("Location: index.php");
     }
     else{

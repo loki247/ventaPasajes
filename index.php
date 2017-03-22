@@ -41,7 +41,7 @@ if(empty($_SESSION['usuario'])) {
 
             <a class="nav-item is-tab is-active" href="index.php">Inicio</a>
 
-            <a class="nav-item is-tab" href="ventaPasajes.html">Venta Pasajes</a>
+            <a class="nav-item is-tab" href="ventaPasajes.php">Venta Pasajes</a>
 
             <ul id="nav">
                 <li><a href="#s1" class="nav-item is-tab">Menu Servicios</a>
@@ -49,15 +49,17 @@ if(empty($_SESSION['usuario'])) {
                     <ul class="subs">
                         <li>
                             <ul>
-                                <li><a class="nav-item is-tab" href="registro_servicios.html">Registrar Servicios</a></li>
-                                <li><a class="nav-item is-tab" href="eliminar_servicios.html">Eliminar Servicios</a></li>
+                                <li><a class="nav-item is-tab" href="registro_servicios.php">Registrar Servicios</a></li>
+                                <li><a class="nav-item is-tab" href="eliminar_servicios.php">Eliminar Servicios</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
             </ul>
-
+            <?php echo "<b>". $_SESSION['usuario'] . "</b>"; ?>
             <a href="logout.php" class="nav-item is-tab">Cerrar Sesión</a>
+
+
 
         </div>
 

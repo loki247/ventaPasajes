@@ -13,6 +13,14 @@
 
 </head>
 <body>
+<?php
+session_start();
+
+if(empty($_SESSION['usuario'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
 
     <div id="container">
         <nav class="nav has-shadow" id="top">
