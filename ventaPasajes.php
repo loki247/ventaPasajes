@@ -61,7 +61,7 @@ if(empty($_SESSION['usuario'])) {
                         </li>
                     </ul>
 
-                    <?php echo "<b>". $_SESSION['usuario'] . "</b>"; ?>
+                    <a href="editarUsuario.php"><?php echo "<b>". $_SESSION['usuario'] ."-" . $_SESSION['rut'] . "</b>"; ?></a>
                     <a href="logout.php" class="nav-item is-tab">Cerrar Sesión</a>
 
                 </div>

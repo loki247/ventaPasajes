@@ -23,6 +23,7 @@ if(empty($_SESSION['usuario'])) {
     exit();
 }
 
+require ("rest/conector.php");
 ?>
 
 <div id="container">
@@ -61,7 +62,7 @@ if(empty($_SESSION['usuario'])) {
                     </li>
                 </ul>
 
-                <?php echo "<b>". $_SESSION['usuario'] . "</b>"; ?>
+                <a href="editarUsuario.php"><?php echo "<b>". $_SESSION['usuario'] . "</b>"; ?></a>
                 <a href="logout.php" class="nav-item is-tab">Cerrar Sesión</a>
 
             </div>
@@ -70,51 +71,53 @@ if(empty($_SESSION['usuario'])) {
 
     </nav>
 
-    <form action="#" method="get" id="formServicio">
-        <div class="columns">
+    <form action="#" method="post" id="formServicio">
+        <div class="columns"  style="margin-top: 10px;">
 
-            <div class="column"></div>
+            <div class="column">
+            </div>
 
-            <div class="column is-2">
+            <div class="column is-3">
+                <h1 class="title">Editar Datos de usuario.</h1>
 
                 <label class="label">RUT:</label>
                  <p class="control">
-                    <input type="text" class="input" name="rut">
+                    <input type="text" class="input" name="rut" value="<?php echo $_SESSION['rut'] ?>" disabled>
                 </p>
 
                 <label class="label">Nombre:</label>
                 <p class="control">
-                    <input type="text" class="input" name="nombre">
+                    <input type="text" class="input" name="nombre" value="<?php echo $_SESSION['nombre'] ?>">
                 </p>
 
                 <label class="label">Apellido Paterno:</label>
                 <p class="control">
-                    <input type="text" class="input" name="aPaterno">
+                    <input type="text" class="input" name="aPaterno" value="<?php echo $_SESSION['apellidoPaterno'] ?>">
                 </p>
 
                 <label class="label">Apellido Materno:</label>
                 <p class="control">
-                    <input type="text" class="input" name="aMatenro">
+                    <input type="text" class="input" name="aMaterno" value="<?php echo $_SESSION['apellidoMaterno'] ?>">
                 </p>
 
                 <label class="label">Teléfono:</label>
                 <p class="control">
-                    <input type="text" class="input" name="telefono">
+                    <input type="text" class="input" name="telefono" value="<?php echo $_SESSION['telefono'] ?>">
                 </p>
 
                 <label class="label">E-Mail:</label>
                 <p class="control">
-                    <input type="text" class="input" name="email">
+                    <input type="text" class="input" name="email" value="<?php echo $_SESSION['email'] ?>">
                 </p>
 
                 <label class="label">Dirección:</label>
                 <p class="control">
-                    <input type="text" class="input" name="direccion">
+                    <input type="text" class="input" name="direccion" value="<?php echo $_SESSION['direccion'] ?>">
                 </p>
 
                 <label class="label">Contraseña</label>
                 <p class="control">
-                    <input type="password" class="input" name="password">
+                    <input type="password" class="input" name="password" value="<?php echo $_SESSION['password'] ?>">
                 </p>
                 <input type="submit" value="Guardar" class="button is-primary" />
 
