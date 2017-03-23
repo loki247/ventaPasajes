@@ -23,11 +23,6 @@ if(empty($_SESSION['usuario'])) {
     exit();
 }
 
-require ("rest/conector.php");
-
-$sql = "SELECT * FROM usuario where rut= '184359383'";
-$result = mysqli_query($conn, $sql);
-
 ?>
 
 <div id="container">
@@ -82,26 +77,10 @@ $result = mysqli_query($conn, $sql);
 
             <div class="column is-2">
 
-                <?php
-
-                if (mysqli_num_rows($result) > 0) {
-                    $arrayJson = array();
-                    $i = 0;
-                    // output data of each row
-                    while($row = mysqli_fetch_assoc($result)) {
-
-                        $arrayJson[$i]= $row;
-                        $i++;
-                    }
-                }
-
-                echo "<label class='label'>RUT:</label>
-                     <p class='control'>
-                     <input type='text' class='input' name='rut' value='" .$row['rut']."'>
-                    </p>";
-
-                ?>
-
+                <label class="label">RUT:</label>
+                 <p class="control">
+                    <input type="text" class="input" name="rut">
+                </p>
 
                 <label class="label">Nombre:</label>
                 <p class="control">
