@@ -17,13 +17,12 @@
 
 <body>
 <?php
+header('Content-Type: text/html; charset=utf-8');
 session_start();
 if(empty($_SESSION['usuario'])) {
     header("Location: login.php");
     exit();
 }
-
-require ("rest/conector.php");
 ?>
 
 <div id="container">
