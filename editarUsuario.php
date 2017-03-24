@@ -23,6 +23,7 @@ if(empty($_SESSION['usuario'])) {
     header("Location: login.php");
     exit();
 }
+
 ?>
 
 <div id="container">
@@ -48,12 +49,12 @@ if(empty($_SESSION['usuario'])) {
                 <a class="nav-item is-tab" href="ventaPasajes.php">Venta Pasajes</a>
 
                 <ul id="nav">
-                    <li><a href="#s1" class="nav-item is-tab is-active">Menu Servicios</a>
+                    <li><a href="#s1" class="nav-item is-tab">Menu Servicios</a>
                         <span id="s1"></span>
                         <ul class="subs">
                             <li>
                                 <ul>
-                                    <li><a class="nav-item is-tab is-active" href="registro_servicios.php">Registrar Servicios</a></li>
+                                    <li><a class="nav-item is-tab" href="registro_servicios.php">Registrar Servicios</a></li>
                                     <li><a class="nav-item is-tab" href="eliminar_servicios.php">Eliminar Servicios</a></li>
                                 </ul>
                             </li>
@@ -61,7 +62,7 @@ if(empty($_SESSION['usuario'])) {
                     </li>
                 </ul>
 
-                <a href="editarUsuario.php"><?php echo "<b>". $_SESSION['usuario'] . "</b>"; ?></a>
+                <a href="editarUsuario.php" class="nav-item is-tab is-active"><?php echo "<b>". $_SESSION['usuario'] . "</b>"; ?></a>
                 <a href="logout.php" class="nav-item is-tab">Cerrar Sesión</a>
 
             </div>
@@ -81,42 +82,42 @@ if(empty($_SESSION['usuario'])) {
 
                 <label class="label">RUT:</label>
                  <p class="control">
-                    <input type="text" class="input" name="rut" value="<?php echo $_SESSION['rut'] ?>" disabled>
+                    <input type="text" class="input" name="rut" value="<?php echo utf8_encode($_SESSION['rut']) ?>" disabled>
                 </p>
 
                 <label class="label">Nombre:</label>
                 <p class="control">
-                    <input type="text" class="input" name="nombre" value="<?php echo $_SESSION['nombre'] ?>">
+                    <input type="text" class="input" name="nombre" value="<?php echo utf8_encode($_SESSION['nombre']) ?>">
                 </p>
 
                 <label class="label">Apellido Paterno:</label>
                 <p class="control">
-                    <input type="text" class="input" name="aPaterno" value="<?php echo $_SESSION['apellidoPaterno'] ?>">
+                    <input type="text" class="input" name="aPaterno" value="<?php echo utf8_encode($_SESSION['apellidoPaterno']) ?>">
                 </p>
 
                 <label class="label">Apellido Materno:</label>
                 <p class="control">
-                    <input type="text" class="input" name="aMaterno" value="<?php echo $_SESSION['apellidoMaterno'] ?>">
+                    <input type="text" class="input" name="aMaterno" value="<?php echo utf8_encode($_SESSION['apellidoMaterno']) ?>">
                 </p>
 
                 <label class="label">Teléfono:</label>
                 <p class="control">
-                    <input type="text" class="input" name="telefono" value="<?php echo $_SESSION['telefono'] ?>">
+                    <input type="text" class="input" name="telefono" value="<?php echo utf8_encode($_SESSION['telefono']) ?>">
                 </p>
 
                 <label class="label">E-Mail:</label>
                 <p class="control">
-                    <input type="text" class="input" name="email" value="<?php echo $_SESSION['email'] ?>">
+                    <input type="text" class="input" name="email" value="<?php echo utf8_encode($_SESSION['email']) ?>">
                 </p>
 
                 <label class="label">Dirección:</label>
                 <p class="control">
-                    <input type="text" class="input" name="direccion" value="<?php echo $_SESSION['direccion'] ?>">
+                    <input type="text" class="input" name="direccion" value="<?php echo utf8_encode($_SESSION['direccion']) ?>">
                 </p>
 
                 <label class="label">Contraseña</label>
                 <p class="control">
-                    <input type="password" class="input" name="password" value="<?php echo $_SESSION['password'] ?>">
+                    <input type="password" class="input" name="password" value="<?php echo utf8_encode($_SESSION['password']) ?>">
                 </p>
                 <input type="submit" value="Guardar" class="button is-primary" />
 
