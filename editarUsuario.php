@@ -71,7 +71,7 @@ if(empty($_SESSION['usuario'])) {
 
     </nav>
 
-    <form action="#" method="post" id="formServicio">
+    <form action="rest/update_usuario.php" method="post" id="formServicio">
         <div class="columns"  style="margin-top: 10px;">
 
             <div class="column">
@@ -92,12 +92,12 @@ if(empty($_SESSION['usuario'])) {
 
                 <label class="label">Apellido Paterno:</label>
                 <p class="control">
-                    <input type="text" class="input" name="aPaterno" value="<?php echo utf8_encode($_SESSION['apellidoPaterno']) ?>">
+                    <input type="text" class="input" name="apellidoPaterno" value="<?php echo utf8_encode($_SESSION['apellidoPaterno']) ?>">
                 </p>
 
                 <label class="label">Apellido Materno:</label>
                 <p class="control">
-                    <input type="text" class="input" name="aMaterno" value="<?php echo utf8_encode($_SESSION['apellidoMaterno']) ?>">
+                    <input type="text" class="input" name="apellidoMaterno" value="<?php echo utf8_encode($_SESSION['apellidoMaterno']) ?>">
                 </p>
 
                 <label class="label">Teléfono:</label>
