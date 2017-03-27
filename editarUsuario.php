@@ -79,7 +79,7 @@ if(empty($_SESSION['usuario'])) {
 
             <div class="column is-3">
                 <h1 class="title">Editar Datos de usuario.</h1>
-
+                <input type="hidden" name="id" value="<?php echo $_SESSION['id'] ?>">
                 <label class="label">RUT:</label>
                  <p class="control">
                     <input type="text" class="input" name="rut" value="<?php echo utf8_encode($_SESSION['rut']) ?>" disabled>

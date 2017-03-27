@@ -30,7 +30,7 @@
 <?php
 
 require ("conector.php");
-$rut= $_POST["rut"];
+$id= $_POST["id"];
 $nombre= $_POST["nombre"];
 $apellidoPaterno= $_POST["apellidoPaterno"];
 $apellidoMaterno= $_POST["apellidoMaterno"];
@@ -39,10 +39,12 @@ $email= $_POST["email"];
 $direccion= $_POST["direccion"];
 $password= $_POST["password"];
 
-$sql= "CALL update_usuario('". $rut ."', '". $nombre ."', '". $apellidoPaterno ."', '". $apellidoMaterno ."', '". $telefono ."', '". $email ."', '". $direccion ."', '". $password ."')";
+//$sql= "CALL update_usuario('". $id ."', '". $nombre ."', '". $apellidoPaterno ."', '". $apellidoMaterno ."', '". $telefono ."', '". $email ."', '". $direccion ."', '". $password ."')";
+$sql= "UPDATE usuario set nombre = '". $nombre ."', apellidoPaterno = '". $apellidoPaterno ."', apellidoMaterno = '". $apellidoMaterno ."', telefono = '". $telefono ."', email = '". $email ."', direccion = '". $direccion ."', password = '". $password ."' WHERE id = ". $id;
 
 if ($conn->query($sql) === TRUE) {
     echo "Registro actualizado";
+    echo $sql;
 } else {
     echo "Error actualizando registro: " . $conn->error;
     echo $sql;
