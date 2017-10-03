@@ -135,7 +135,7 @@ if(empty($_SESSION['usuario'])) {
 
         <script src="js/venta.js"></script>
 
-        <div class="table table is-bordered table is-striped" id="resultadosServicios">
+        <div class="table table is-bordered table is-striped " id="resultadosServicios">
             <table id="resultados"></table>
         </div>
 

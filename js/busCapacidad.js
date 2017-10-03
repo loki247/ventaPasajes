@@ -546,7 +546,7 @@ $(document).ready(function () {
         $.each(result, function (i, field) {
             
             for (i = 0; i < field.capacidad; i++) {
-                if (field.asiento == document.getElementById(i + 1).value && field.origenId==datos.idOrigen && field.destinoId==datos.idDestino) {
+                if (field.asiento == document.getElementById(i + 1).value && field.origenId==datos.idOrigen && field.destinoId>=datos.idDestino) {
                     document.getElementById(i + 1).checked = true;
                     document.getElementById(i + 1).disabled = true;
                     console.log("Asiento vendido: "+ field.asiento);

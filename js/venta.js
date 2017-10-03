@@ -48,7 +48,7 @@ $(document).ready(function () {
                         "<td>" + field.horaSalida + "</td>" +
                         "<td>$" + field.valor + "</td>" +
                         "<td>" +
-                        "<form action='disponibilidad.html' method='get'>" +
+                        "<form action='disponibilidad.php' method='get'>" +
                             "<input type='hidden' name='idBus' value='" + field.idBus + "'>" +
                             "<input type='hidden' name='origen' value='" + field.origen + "'>" +
                             "<input type='hidden' name='destino' value='" + field.destino + "'>" +
