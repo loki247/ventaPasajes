@@ -6,7 +6,7 @@ $(document).ready(function () {
     //Origen
     $.getJSON(url + "rest/get_ciudad.php", function (result) {
         $.each(result, function (i, field) {
-            $("#opcOrigen").append("<option value='" + field.id + "'>" + field.nombre + "</option>");
+            $("#opcOrigen").append("<option value='" + field.idCiudad + "'>" + field.nombre + "</option>");
             $("#opcOrigen").change(function () {
                 console.log("ID Origen: " + $("#opcOrigen").val());
             });
@@ -17,7 +17,7 @@ $(document).ready(function () {
     //Destino
     $.getJSON(url + "rest/get_ciudad.php", function (result) {
         $.each(result, function (i, field) {
-            $("#opcDestino").append("<option value='" + field.id + "'>" + field.nombre + "</option>");
+            $("#opcDestino").append("<option value='" + field.idCiudad + "'>" + field.nombre + "</option>");
             $("#opcDestino").change(function () {
                 console.log("ID Destino: " + $("#opcDestino").val());
             });
