@@ -1,4 +1,4 @@
-﻿var url = "http://localhost:8080/ventaPasajes/";
+﻿var url = "http://localhost/ventaPasajes/";
 
 $(document).ready(function () {
 
