@@ -51,7 +51,7 @@
             <br>
             <br>
             <label class="label">Contraseña:</label>
-            <input type="password" class="input" name="password">
+            <input type="password" class="input" name="clave">
             <br>
             <br>
             <input type="submit" name="btnLogin" class="button" value="Entrar">

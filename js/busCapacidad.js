@@ -26,6 +26,7 @@ $(document).ready(function () {
             "<li>Valor: $" + datos.valor + "</li>" +
             "<li>Salón: " + datos.salon + "</li>" +
             "</ul>");
+
     }
     else{
         $("#servicio").append
@@ -44,7 +45,7 @@ $(document).ready(function () {
 
    $.getJSON(url + "rest/get_paraderosSubida.php?c=" + datos.idOrigen, function (result) {
         $.each(result, function (i, field) {
-            $("#opcParadero").append("<option value='" + field.nombre + "'>" + field.nombre + "</option>");
+            $("#opcParadero").append("<option value='" + field.nombre_paradero + "'>" + field.nombre_paradero + "</option>");
         });
 
     });

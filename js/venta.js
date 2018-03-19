@@ -6,7 +6,7 @@ $(document).ready(function () {
     //Origen
     $.getJSON(url + "rest/get_ciudad.php", function (result) {
         $.each(result, function (i, field) {
-            $("#opcOrigen").append("<option value='" + field.idCiudad + "'>" + field.nombre + "</option>");
+            $("#opcOrigen").append("<option value='" + field.idCiudad + "'>" + field.nombre_ciudad + "</option>");
             $("#opcOrigen").change(function () {
                 console.log("ID Origen: " + $("#opcOrigen").val());
             });
@@ -17,7 +17,7 @@ $(document).ready(function () {
     //Destino
     $.getJSON(url + "rest/get_ciudad.php", function (result) {
         $.each(result, function (i, field) {
-            $("#opcDestino").append("<option value='" + field.idCiudad + "'>" + field.nombre + "</option>");
+            $("#opcDestino").append("<option value='" + field.idCiudad + "'>" + field.nombre_ciudad + "</option>");
             $("#opcDestino").change(function () {
                 console.log("ID Destino: " + $("#opcDestino").val());
             });
@@ -43,20 +43,19 @@ $(document).ready(function () {
                     ("<tr>" +
                         "<td>" + field.origen + "</td>" +
                         "<td>" + field.destino + "</td>" +
-                        "<td>" + field.salon + "</td>" +
-                        "<td>" + field.fecha + "</td>" +
-                        "<td>" + field.horaSalida + "</td>" +
+                        "<td>" + field.nombre_salon + "</td>" +
+                        "<td>" + field.fecha_salida + "</td>" +
+                        "<td>" + field.hora_salida + "</td>" +
                         "<td>$" + field.valor + "</td>" +
                         "<td>" +
                         "<form action='disponibilidad.php' method='get'>" +
-                            "<input type='hidden' name='idBus' value='" + field.idBus + "'>" +
+                            "<input type='hidden' name='idBus' value='" + field.bus_idbus + "'>" +
                             "<input type='hidden' name='origen' value='" + field.origen + "'>" +
                             "<input type='hidden' name='destino' value='" + field.destino + "'>" +
-                            "<input type='hidden' name='idServicio' value='" + field.idServicio + "'>" +
-                            "<input type='hidden' name='fecha' value='" + field.fecha + "'>" +
-                            "<input type='hidden' name='horaSalida' value='" + field.horaSalida + "'>" +
+                            "<input type='hidden' name='fecha' value='" + field.fecha_salida + "'>" +
+                            "<input type='hidden' name='horaSalida' value='" + field.hora_salida + "'>" +
                             "<input type='hidden' name='valor' value='" + field.valor + "'>" +
-                            "<input type='hidden' name='salon' value='" + field.salon + "'>" +
+                            "<input type='hidden' name='salon' value='" + field.nombre_salon + "'>" +
                             "<input type='hidden' name='idSalon' value='" + field.idSalon + "'>" +
                             "<input type='hidden' name='idOrigen' value='" + $("#opcOrigen option:selected").val()+ "'>" +
                             "<input type='hidden' name='idDestino' value='" + $("#opcDestino option:selected").val()+ "'>" +

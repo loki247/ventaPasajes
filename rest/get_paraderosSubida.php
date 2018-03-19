@@ -2,7 +2,7 @@
 require ("conector.php");
 
 $idCiudad = $_GET["c"];
-$sql = "CALL get_paraderosSubida(".$idCiudad.")";
+$sql = "CALL get_paraderos(".$idCiudad.")";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {

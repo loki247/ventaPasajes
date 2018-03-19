@@ -5,7 +5,7 @@ $(document).ready(function () {
     //Bus
     $.getJSON(url + "rest/get_buses.php", function (result) {
         $.each(result, function (i, field) {
-            $("#opcBus").append("<option value='" + field.id + "'>" + field.patente + "</option>");
+            $("#opcBus").append("<option value='" + field.idBus + "'>" + field.patente + "</option>");
         });
     });
 
@@ -23,7 +23,8 @@ $(document).ready(function () {
             $("#opcDestino").append("<option value='" + field.id + "'>" + field.nombre + "</option>");
         });
     });
-    
+
+    /*
     var fecha =  $("#datepicker").val();
     var horaSalida = $("#horaSalida").val();
     var horaLlegada = $("#horaLlegada").val();
@@ -33,14 +34,15 @@ $(document).ready(function () {
     });
     var origenId;
     $("#opcOrigen").change(function () {
-        origenId = $("#opcOrigen").text();
+        origenId = $("#opcOrigen").val();
     });
     var destinoId;
     $("#opcDestino").change(function () {
-        destinoId = $("#opcDestino").text();
+        destinoId = $("#opcDestino").val();
     });
     var valor = $("#valor").val();
 
     console.log(fecha, horaSalida, horaLlegada, busId, origenId, destinoId, valor);
+    */
    
 });

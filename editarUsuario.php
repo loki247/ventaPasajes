@@ -92,12 +92,12 @@ if(empty($_SESSION['usuario'])) {
 
                 <label class="label">Apellido Paterno:</label>
                 <p class="control">
-                    <input type="text" class="input" name="apellidoPaterno" value="<?php echo utf8_encode($_SESSION['apellidoPaterno']) ?>">
+                    <input type="text" class="input" name="apellido_paterno" value="<?php echo utf8_encode($_SESSION['apellido_paterno']) ?>">
                 </p>
 
                 <label class="label">Apellido Materno:</label>
                 <p class="control">
-                    <input type="text" class="input" name="apellidoMaterno" value="<?php echo utf8_encode($_SESSION['apellidoMaterno']) ?>">
+                    <input type="text" class="input" name="apellido_materno" value="<?php echo utf8_encode($_SESSION['apellido_materno']) ?>">
                 </p>
 
                 <label class="label">Teléfono:</label>
@@ -117,7 +117,7 @@ if(empty($_SESSION['usuario'])) {
 
                 <label class="label">Contraseña</label>
                 <p class="control">
-                    <input type="password" class="input" name="password" value="<?php echo utf8_encode($_SESSION['password']) ?>">
+                    <input type="password" class="input" name="clave" value="<?php echo utf8_encode($_SESSION['clave']) ?>">
                 </p>
                 <input type="submit" value="Guardar" class="button is-primary" />
 
